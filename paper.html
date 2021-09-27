@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+      .newdiv {
+        background-color: #002132;
+        border-radius: 10px;
+        font-family: 'Ubuntu', sans-serif;
+        padding: 20px;
+        font-size: 1em;
+        color:white;
+        box-shadow: 2px 2px 4px 5px black;
+      }
+
+      button{
+          margin: 10px;
+      }
+
+        h1{
+          color: rgb(238, 223, 84);
+          text-align: center;
+          font-family:Georgia, 'Times New Roman';
+          font-size: 2.5em;
+      }
+
+        h2{
+          color:orange;
+        }
+
+        table{
+        border: 1px solid black;
+        border-collapse:collapse;
+        width: 60%;
+        background-color: #c74721;
+        white-space:nowrap;
+      }
+
+      th {
+        border: 1px solid black;
+        padding: 10px;
+        background-color: rgb(75, 46, 46);
+        width: 60%;
+        white-space:nowrap;
+        text-align: center;
+        
+      }
+      td{
+        border: 1px solid black;
+        border-collapse:collapse;
+        padding: 10px;
+        background-color: #c74721;
+        width: 60%;
+        white-space:nowrap;
+        text-align: center;
+      }
+
+
+    </style>
+</head>
+<body>
+    <div id="papr" class="newdiv">
+        <h1>Paper Names</h1>
+      <p class="text-center">      
+        <button class="btn btn-primary" id = "0" >Semester I</button>
+        <button class="btn btn-primary" id = "1" >Semester II</button>
+        <button class="btn btn-primary" id = "2" >Semester III</button>
+        <button class="btn btn-primary" id = "3" >Semester IV</button>
+        <button class="btn btn-primary" id = "4" >Semester V</button>
+        <button class="btn btn-primary" id = "5" >Semester VI</button>
+
+      </p>  
+      <span id="sempapr"></span>
+    </div>
+
+    <script>
+   
+    $("p").on( "click", "button", function(e){
+        e.preventDefault();
+        var id = $(this).attr("id");
+        var xhr = new XMLHttpRequest(); 
+        xhr.onload = function() { 
+          if(xhr.status === 200) { 
+                  responseObject = JSON.parse(xhr.responseText);
+
+                if(id<2){
+                var sem=id;
+                sem++;
+                  var newContent = ' ';
+                  newContent += ' <table class="tacont3"> ';
+                  newContent += '<tr><th class="thcont3">SEMESTER '+ sem +'</th></tr>';
+                  newContent += '<tr><td class="tdcont3"> ' + responseObject.sub[id].s1+'</td></tr>';
+                  newContent += '<tr><td class="tdcont3"> ' + responseObject.sub[id].s2 +'</td></tr><br>';
+                  newContent += '<tr><td class="tdcont3"> ' + responseObject.sub[id].s3 +'</td></tr><br>';
+                  newContent += '<tr><td class="tdcont3"> ' + responseObject.sub[id].s4 +'</td></tr><br>';
+                  newContent += '</table>';
+                  document.getElementById('sempapr').innerHTML = newContent;
+                }
+                else if(id<5){
+                    var sem=id;
+                    sem++;
+                  var newContent = ' ';
+                  newContent += ' <table class="tacont3"> ';
+                  newContent += '<tr><th class="thcont3">SEMESTER '+ sem +'</th></tr>';
+                  newContent += '<tr><td class="tdcont3"> ' + responseObject.sub[id].s1+'</td></tr>';
+                  newContent += '<tr><td class="tdcont3"> ' + responseObject.sub[id].s2 +'</td></tr><br>';
+                  newContent += '<tr><td class="tdcont3"> ' + responseObject.sub[id].s3 +'</td></tr><br>';
+                  newContent += '<tr><td class="tdcont3"> ' + responseObject.sub[id].s4 +'</td></tr><br>';
+                  newContent += '<tr><td class="tdcont3"> ' + responseObject.sub[id].s5 +'</td></tr><br>';
+                  newContent += '<tr><td class="tdcont3"> ' + responseObject.sub[id].s6 +'</td></tr><br>';
+                  newContent += '</table>';
+                  document.getElementById('sempapr').innerHTML = newContent;
+                }
+                else{
+                    var sem=id;
+                    sem++;
+                  var newContent = ' ';
+                  newContent += ' <table class="tacont3"> ';
+                  newContent += '<tr><th class="thcont3">SEMESTER '+ sem +'</th></tr>';
+                  newContent += '<tr><td class="tdcont3"> ' + responseObject.sub[id].s1+'</td></tr>';
+                  newContent += '<tr><td class="tdcont3"> ' + responseObject.sub[id].s2 +'</td></tr><br>';
+                  newContent += '<tr><td class="tdcont3"> ' + responseObject.sub[id].s3 +'</td></tr><br>';
+                  newContent += '<tr><td class="tdcont3"> ' + responseObject.sub[id].s4 +'</td></tr><br>';
+                  newContent += '<tr><td class="tdcont3"> ' + responseObject.sub[id].s5 +'</td></tr><br>';
+                  newContent += '<tr><td class="tdcont3"> ' + responseObject.sub[id].s6 +'</td></tr><br>';
+                  newContent += '<tr><td class="tdcont3"> ' + responseObject.sub[id].s7 +'</td></tr><br>';
+                  newContent += '<tr><td class="tdcont3"> ' + responseObject.sub[id].s8 +'</td></tr><br>';
+                  newContent += '<tr><td class="tdcont3"> ' + responseObject.sub[id].s9 +'</td></tr><br>';
+                  newContent += '</table>';
+                  document.getElementById('sempapr').innerHTML = newContent;
+                }
+
+      }
+      }
+    xhr.open( 'GET', 'subject.json' , true);
+    xhr.send(null);
+  });
+
+
+
+</script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>

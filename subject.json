@@ -1,0 +1,59 @@
+
+{
+    "sub":[
+
+        {   "s1": "Programming in C++",
+            "s2": "Computer System Architecture",
+            "s3": "EVS/English",
+            "s4": "General Elective 1"
+        },
+
+        {   "s1": "&emsp; &emsp; Programming in Java &emsp; &ensp;",
+            "s2": "Discrete Structures",
+            "s3": "EVS/Eglish",
+            "s4": "General Elective 2"
+        },
+
+        {   "s1": "Data Structures",
+            "s2": "Operating System",
+            "s3": "Computer Networks",
+            "s4": "Web Design and Developement",
+            "s5": "Programming in Python",
+            "s6": "General Elective 3"
+
+        },
+
+        {   
+            "s1": "Design and Analysis of Algorithms",
+            "s2": "Software Engineering",
+            "s3": "Database Management Systems",
+            "s4": "Android Programming",
+            "s5": "Introduction to R programming",
+            "s6": "General Elective 4"
+        },
+
+        {
+            "s1": "Internet Technologies",
+            "s2": "Theory of Computation",
+            "s3": "Data Analysis and Visualization",
+            "s4": "System Programming",
+            "s5": "Combinatorial Optimization",
+            "s6": "Microprocessors"
+
+        },
+
+        {
+            "s1": "Artificial Intelligence",
+            "s2": "Computer Graphics",
+            "s3": "Information Security",
+            "s4": "Data Mining",
+            "s5": "Advanced Algorithms",
+            "s6": "Machine Learning",
+            "s7": "Deep Learning",
+            "s8": "Unix Network Programming",
+            "s9": "Project Work/ Dissertation"
+
+
+        }
+    ]
+}
